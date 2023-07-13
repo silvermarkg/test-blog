@@ -2,7 +2,8 @@
 
 source "https://rubygems.org"
 gem "webrick", "~> 1.8"
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3.2"
+#gem "github-pages", group: :jekyll_plugins
 gem "jekyll-theme-chirpy", "~> 6.1"
 
 group :test do
