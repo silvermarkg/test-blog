@@ -18,7 +18,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: silvermarkg labs # the main title
+title: <img src='assets/smgLabsLogo-2023v2.png'/> # the main title
 
 tagline: My tech notes... # it will display as the sub-title
 
