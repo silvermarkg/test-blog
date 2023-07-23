@@ -1,0 +1,17 @@
+<!-- Top banner -->
+<div id="topbanner">
+  <a href="{{ '/' | relative_url }}">
+    {% if site.banner != empty and site.banner %}
+      {% capture banner_url %}
+        {% if site.banner contains '://' %}
+          {{ site.banner }}
+        {% elsif site.img_cdn != empty and site.img_cdn %}
+          {{ site.banner | prepend: site.img_cdn }}
+        {% else %}
+          {{ site.banner | relative_url }}
+        {% endif %}
+      {% endcapture %}
+      <img src="{{ banner_url | strip }}" alt="banner" onerror="this.style.display='none'" width="400px" height="100px">
+    {% endif %}
+  </a>
+</div>

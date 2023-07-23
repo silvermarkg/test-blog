@@ -1,0 +1,74 @@
+---
+---
+
+@import '{{ site.theme }}';
+
+/* append your custom style below */
+
+/*
+  Responsive Design:
+
+ {sidebar, content, panel} >= 1200px screen width
+ {sidebar, content} >= 850px screen width
+ {content} <= 849px screen width
+
+*/
+
+#access-search {
+  a {
+    &:hover {
+      @extend %link-hover;
+    }
+
+    @extend %no-bottom-border;
+
+    color: inherit;
+  }
+}
+
+#topbanner {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  
+  a {
+    height: $topbanner-height;
+    width: $topbanner-width;
+  }
+  img {
+    //width: auto;
+  }
+}
+
+#topbar-banner {
+  display: none;
+  background: var(--main-bg);
+}
+
+#sidebar-banner {
+  display: none;
+}
+
+/* sidebar visible */
+@media all and (min-width: 850px) {
+  #sidebar-banner {
+//    display: block;
+  }
+}
+
+/* sidebar and panel hidden */
+//@media all and (max-width: 849px) {
+  #topbar-banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+//}
+
+#main {
+  background: var(--sidebar-bg);
+}
+
+#sidebar {
+  background: var(--main-bg);
+}

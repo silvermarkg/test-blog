@@ -18,9 +18,9 @@ timezone: +0100
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: silvermarkg blog # the main title
+title: silvermarkg # the main title
 
-tagline: My tech notes... # it will display as the sub-title
+tagline: technical blog # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -76,7 +76,10 @@ theme_mode: dark # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/smgLabsLogoSquare-2023v2.png
+avatar: #/assets/ProfilePic-2021.jpg
+
+# banner image on topbanner
+banner: /assets/smgLabsLogo-2023v2.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -92,7 +95,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
+    repo: silvermarkg/silvermarkg.github.io # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
