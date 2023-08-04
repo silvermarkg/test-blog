@@ -1,11 +1,7 @@
 <!-- The Side Bar -->
 
 <div id="sidebar" class="d-flex flex-column align-items-end">
-  <div id="sidebar-banner">
-    {% include topbanner.html lang=lang %}
-  </div>
     <div class="profile-wrapper">
-      <!--
       {% if site.avatar != empty and site.avatar %}
         {% capture avatar_url %}
           {% if site.avatar contains '://' %}
@@ -20,7 +16,6 @@
           <img src="{{ avatar_url | strip }}" alt="avatar" onerror="this.style.display='none'">
         </a>
       {% endif %}
-      -->
       <div class="site-title">
         <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </div>
@@ -28,7 +23,7 @@
     </div>
 
     <!-- .profile-wrapper -->
-  
+
     <ul class="nav flex-column flex-grow-1 w-100 ps-0">
       <!-- home -->
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
@@ -52,6 +47,10 @@
     </ul>
     <!-- ul.nav.flex-column -->
   
+    <!-- Category list -->
+    <div class="access">
+    </div>
+
     <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
       {% unless site.theme_mode %}
         <button class="mode-toggle btn" aria-label="Switch Mode">

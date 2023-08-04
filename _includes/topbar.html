@@ -12,7 +12,6 @@
     class="container d-flex align-items-center justify-content-between h-100"
   >
    
-
   <span id="breadcrumb">
       {% assign paths = page.url | split: '/' %}
 
@@ -49,6 +48,7 @@
     <!-- endof #breadcrumb -->
 
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
+    <i id="sidebar-close" class="fas fa-close fa-fw"></i>
 
     <div id="topbar-title">
       {% if page.layout == 'home' %}
