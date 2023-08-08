@@ -26,44 +26,54 @@
   }
 }
 
+
+#breadcrumb {
+  display: none;
+}
+
 #topbanner {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  
+  //position: relative;
+  height: $topbanner-height;
+  //overflow-y: auto;
+  //width: 100%;
+  //z-index: 99;
+  background: var(--main-bg);
+  padding-top: 1rem;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
   a {
     height: $topbanner-height;
     width: $topbanner-width;
   }
-  img {
-    //width: auto;
+}
+
+#topbar-wrapper {
+  //position: relative;
+  height: $topbar-height;
+  //overflow-y: auto;
+  //width: 100%;
+  //z-index: 99;
+  background: var(--sidebar-bg);
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
   }
-}
 
-#topbar-banner {
-  display: none;
-  background: var(--main-bg);
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
-
-#sidebar-banner {
-  display: none;
-}
-
-/* sidebar visible */
-@media all and (min-width: 850px) {
-  #sidebar-banner {
-//    display: block;
-  }
-}
-
-/* sidebar and panel hidden */
-//@media all and (max-width: 849px) {
-  #topbar-banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-//}
 
 #main {
   background: var(--sidebar-bg);
@@ -71,4 +81,102 @@
 
 #sidebar {
   background: var(--main-bg);
+  
+  .profile-wrapper {
+    display: none;
+  }
+
+  ul {
+    margin-top: 2rem; //$sidebar-top;
+  }
 }
+
+#sidebar-trigger {
+  .icon {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		font-size: 24px;
+		color: #000;
+		cursor: pointer;
+	}
+
+	.icon::before {
+	  content: "\f0c9";
+	}
+
+	.custom-icon.active::before {
+		content: "\f00d";
+		color: #0f0;
+	}
+}
+
+// NEED TO SORT THIS STYLE OUT SO POSTITIONED NAVBAR IS CORRECT (NEEDED TO ALLOW Z-INDEX)
+// #navbar {
+//   position: fixed;
+//   top: $sidebar-top;
+//   left: 0;
+//   //height: 100%;
+//   overflow-y: auto;
+//   width: $sidebar-width;
+//   z-index: 99;
+//   background: var(--sidebar-bg);
+
+//   /* Hide scrollbar for Chrome, Safari and Opera */
+//   &::-webkit-scrollbar {
+//     display: none;
+//   }
+
+//   /* Hide scrollbar for IE, Edge and Firefox */
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+
+//   ul {
+//     margin-bottom: 2rem;
+
+//     li.nav-item {
+//       opacity: 0.9;
+//       width: 100%;
+//       padding-left: 1.5rem;
+//       padding-right: 1.5rem;
+
+//       a.nav-link {
+//         @include pt-pb(0.6rem);
+
+//         display: flex;
+//         align-items: center;
+//         border-radius: 0.75rem;
+//         font-weight: 600;
+
+//         &:hover {
+//           background-color: var(--sidebar-hover-bg);
+//         }
+
+//         i {
+//           font-size: 95%;
+//           opacity: 0.8;
+//           margin-right: 1.5rem;
+//         }
+
+//         span {
+//           font-size: 90%;
+//           letter-spacing: 0.2px;
+//         }
+//       }
+
+//       &.active {
+//         .nav-link {
+//           color: var(--sidebar-active-color);
+//           background-color: var(--sidebar-hover-bg);
+
+//           span {
+//             opacity: 1;
+//           }
+//         }
+//       }
+
+//       &:not(:first-child) {
+//         margin-top: 0.25rem;
+//       }
+//     }
+//   }
+// }

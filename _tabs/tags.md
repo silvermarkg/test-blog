@@ -1,4 +1,4 @@
-# Remove this line to reinstate the tags menu item
+# Remove this line to reinstate tags menu item
 ---
 layout: tags
 icon: fas fa-tags
